@@ -1,7 +1,10 @@
-用 Maven 组织 Java & Scala 混合编程
-参考自：https://github.com/zxpbenson/scala-java-mixd-by-maven
+用 Maven 组织 Java & Scala 混合编程  
+参考自：https://github.com/zxpbenson/scala-java-mixd-by-maven  
 升级了scala 和 java 版本，目前编译打包，运行正常
 搞一个scala和java 混合编译太难了
+
+1. 之前有时候IDEA能运行，mvn无法编译，这是因为maven 编译和打包配置问题，值配置编译顺序是不行的，有交叉调用（我感觉）
+2. maven clean compile package 没问题，idea运行有问题，可能是配置问题或者idea缓存问题
 
 ```bash
 1. mvn -version
@@ -38,6 +41,3 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 ```
-
-1. 之前有时候IDEA能运行，mvn无法编译，这是因为maven 编译和打包配置问题，值配置编译顺序是不行的，有交叉调用（我感觉）
-2. maven clean compile package 没问题，idea运行有问题，可能是配置问题或者idea缓存问题
